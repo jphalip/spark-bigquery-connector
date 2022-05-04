@@ -66,6 +66,8 @@
         <paranamer.version>2.8</paranamer.version>
         <protobuf.version>3.19.4</protobuf.version>
         <zstd.version>1.4.9-1</zstd.version>
+        <deploy.skip>true</deploy.skip>
+        <nexus.remote.skip>false</nexus.remote.skip>
 
         <!-- checkstyle
         <checkstyle.header.file>${reactor.project.basedir}/java.header</checkstyle.header.file>
@@ -586,6 +588,7 @@
                             <serverId>ossrh</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                            <skipRemoteStaging>${nexus.remote.skip}</skipRemoteStaging>
                         </configuration>
                     </plugin>
                     <plugin>
@@ -601,6 +604,10 @@
                                 </goals>
                             </execution>
                         </executions>
+                        <configuration>
+                            <!-- Expect the password to be passed as the gpg.passphrase property instead of provided over a tty by the gpg-agent process. -->
+                            <useAgent>false</useAgent>
+                        </configuration>
                     </plugin>
                     <plugin>
                         <artifactId>maven-source-plugin</artifactId>
