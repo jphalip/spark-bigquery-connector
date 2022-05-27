@@ -1,5 +1,7 @@
 # Release Notes
 
+## Next
+
 ## 0.0.1 - 2022-05-27
 * Test release checking out release automation.
 
