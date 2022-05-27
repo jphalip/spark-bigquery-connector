@@ -1,6 +1,7 @@
 # Release Notes
 
 ## Next
+* Test release checking out release automation.
 
 ## 0.0.1 - 2022-05-27
 * Issue #530: Treating Field.mode==null as Nullable
