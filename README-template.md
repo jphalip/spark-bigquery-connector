@@ -154,7 +154,7 @@ Scala binary version.
 | spark-bigquery-with-dependencies_2.11 | 2.3-2.4 | 0.29.0       | `gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.11-0.29.0.jar` ([HTTP link](https://storage.googleapis.com/spark-lib/bigquery/spark-bigquery-with-dependencies_2.11-0.29.0.jar)) | `com.google.cloud.spark:spark-bigquery-with-dependencies_2.11:0.29.0` |
 | spark-2.4-bigquery                    | 2.4     | 0.37.0       | `gs://spark-lib/bigquery/spark-2.4-bigquery-0.37.0.jar` ([HTTP link](https://storage.googleapis.com/spark-lib/bigquery/spark-2.4-bigquery-0.37.0.jar))                                       | `com.google.cloud.spark:spark-2.4-bigquery:0.37.0`                    |
 
-### Specifying the  Spark BigQuery connector version in a Dataproc cluster
+### Specifying the Spark BigQuery connector version in a Dataproc cluster
 
 Dataproc clusters created using image 2.1 and above, or batches using the Dataproc serverless service come with built-in Spark BigQuery connector.
 Using the standard `--jars` or `--packages` (or alternatively, the `spark.jars`/`spark.jars.packages` configuration) won't help in this case as the built-in connector takes precedence.
@@ -175,7 +175,7 @@ gcloud dataproc jobs submit pyspark --cluster "$MY_CLUSTER" \
 
 Dataproc clusters created using image 2.1 and above come with a built-in
 connector, so no additional jar is needed. To use another connector version, see
-[Specifying the Spark BigQuery connector version in a Dataproc cluster](#specifying-the--spark-bigquery-connector-version-in-a-dataproc-cluster).
+[Specifying the Spark BigQuery connector version in a Dataproc cluster](#specifying-the-spark-bigquery-connector-version-in-a-dataproc-cluster).
 
 ## Example Codelab ##
 
